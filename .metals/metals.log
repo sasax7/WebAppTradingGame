@@ -306,3 +306,5 @@ SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@6165094
 2024.04.23 15:59:29 INFO  time: Connected to build server in 1.43s
 2024.04.23 15:59:29 INFO  Connected to Build server: Bloop v1.5.17
 2024.04.23 15:59:29 INFO  time: Imported build in 0.39s
+2024.04.23 16:01:37 INFO  time: indexed workspace in 2m7s
+error: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\.tmp\.metals\.tmp\Main5571869489299578512.scala is not a file
