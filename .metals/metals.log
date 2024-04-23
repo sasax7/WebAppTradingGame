@@ -285,3 +285,7 @@ SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@718be88
 2024.04.23 14:35:12 INFO  time: Imported build in 0.68s
 2024.04.23 14:37:43 INFO  time: indexed workspace in 2m30s
 error: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\.tmp\.metals\.tmp\Main2056442978107509218.scala is not a file
+Apr. 23, 2024 3:25:06 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
+Apr. 23, 2024 3:28:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
