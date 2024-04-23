@@ -1,0 +1,287 @@
+2024.04.22 17:32:25 INFO  Started: Metals version 1.3.0+30-f09200f0-SNAPSHOT in folders 'C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp' for client Visual Studio Code - Insiders 1.89.0-insider.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@26f25565]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@51f583fd]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@26f25565]
+2024.04.22 17:32:25 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.04.22 17:32:28 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\build.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 8
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 9
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 10
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 11
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 12
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 13
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 14
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 15
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 16
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 17
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 18
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 19
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 20
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 21
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 22
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 23
+Apr. 22, 2024 5:33:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 24
+2024.04.22 17:33:33 INFO  running 'C:\Users\sti\AppData\Local\Coursier\cache\arc\https\github.com\adoptium\temurin11-binaries\releases\download\jdk-11.0.22%252B7\OpenJDK11U-jdk_x64_windows_hotspot_11.0.22_7.zip\jdk-11.0.22+7\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\sti\AppData\Local\Temp\metals964416444173441610\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.04.22 17:33:40 INFO  [info] welcome to sbt 1.9.8 (Eclipse Adoptium Java 11.0.22)
+2024.04.22 17:33:44 INFO  [info] loading settings for project webapp-build-build-build from metals.sbt ...
+2024.04.22 17:33:46 INFO  [info] loading project definition from C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\project
+2024.04.22 17:33:51 INFO  [info] loading settings for project webapp-build-build from metals.sbt ...
+2024.04.22 17:33:51 INFO  [info] loading project definition from C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project
+2024.04.22 17:34:03 INFO  [success] Generated .bloop\webapp-build-build.json
+2024.04.22 17:34:03 INFO  [success] Total time: 11 s, completed 22.04.2024, 17:34:03
+2024.04.22 17:34:06 INFO  [info] loading settings for project webapp-build from metals.sbt,plugins.sbt ...
+2024.04.22 17:34:06 INFO  [info] loading project definition from C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project
+2024.04.22 17:34:17 INFO  [success] Generated .bloop\webapp-build.json
+2024.04.22 17:34:18 INFO  [success] Total time: 11 s, completed 22.04.2024, 17:34:18
+2024.04.22 17:34:23 INFO  [info] loading settings for project root from build.sbt ...
+2024.04.22 17:34:23 INFO  [info]   __              __
+2024.04.22 17:34:23 INFO  [info]   \ \     ____   / /____ _ __  __
+2024.04.22 17:34:23 INFO  [info]    \ \   / __ \ / // __ `// / / /
+2024.04.22 17:34:23 INFO  [info]    / /  / /_/ // // /_/ // /_/ /
+2024.04.22 17:34:23 INFO  [info]   /_/  / .___//_/ \__,_/ \__, /
+2024.04.22 17:34:23 INFO  [info]       /_/               /____/
+2024.04.22 17:34:23 INFO  [info] 
+2024.04.22 17:34:23 INFO  [info] Version 3.0.2 running Java 11.0.22
+2024.04.22 17:34:23 INFO  [info] 
+2024.04.22 17:34:23 INFO  [info] Play is run entirely by the community. Please consider contributing and/or donating:
+2024.04.22 17:34:23 INFO  [info] https://www.playframework.com/sponsors
+2024.04.22 17:34:23 INFO  [info] 
+2024.04.22 17:34:44 INFO  [success] Generated .bloop\root.json
+2024.04.22 17:34:50 INFO  [success] Generated .bloop\root-test.json
+2024.04.22 17:34:50 INFO  [success] Total time: 26 s, completed 22.04.2024, 17:34:50
+2024.04.22 17:34:51 INFO  time: ran 'sbt bloopInstall' in 1m17s
+2024.04.22 17:34:51 INFO  Attempting to connect to the build server...
+2024.04.22 17:35:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.22 17:35:13 INFO  Attempting to connect to the build server...
+2024.04.22 17:35:13 INFO  Attempting to connect to the build server...
+2024.04.22 17:35:13 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.22 17:35:14 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.22 17:35:15 INFO  time: Connected to build server in 24s
+2024.04.22 17:35:15 INFO  Connected to Build server: Bloop v1.5.17
+2024.04.22 17:35:15 INFO  time: Imported build in 0.55s
+2024.04.22 17:36:17 INFO  time: indexed workspace in 1m
+2024.04.22 17:36:27 INFO  time: code lens generation in 9.01s
+2024.04.22 17:36:27 INFO  time: code lens generation in 8.67s
+2024.04.22 17:36:27 INFO  time: code lens generation in 9.01s
+2024.04.22 17:36:27 INFO  time: code lens generation in 9.01s
+2024.04.22 17:36:27 INFO  time: code lens generation in 9.01s
+2024.04.22 17:44:58 INFO  compiling root (7 scala sources and 1 java source)
+2024.04.22 17:45:10 WARN  Unexpected javac output: WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.sourcegraph.shaded.com.sourcegraph.semanticdb_javac.SemanticdbJavacOptions (file:/C:/Users/sti/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.9.10/semanticdb-javac-0.9.10.jar) to method com.sun.tools.javac.api.BasicJavacTask.getContext()
+WARNING: Please consider reporting this to the maintainers of com.sourcegraph.shaded.com.sourcegraph.semanticdb_javac.SemanticdbJavacOptions
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\target\scala-2.13\routes\main\controllers\routes.java:4: error: semanticdb-javac: unknown flag '-'
+package controllers;
+^
+C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\target\scala-2.13\routes\main\controllers\routes.java:4: error: semanticdb-javac: unknown flag 'Leicom'
+package controllers;
+^
+C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\target\scala-2.13\routes\main\controllers\routes.java:4: error: semanticdb-javac: unknown flag 'AG/Desktop/ElionaApp/webapp'
+package controllers;
+^
+3 errors.
+2024.04.22 17:45:10 WARN  javac exited with exit code 1
+2024.04.22 17:45:10 INFO  time: compiled root in 11s
+2024.04.22 17:46:11 INFO  compiling root (7 scala sources and 1 java source)
+2024.04.22 17:46:12 INFO  time: compiled root in 1.2s
+2024.04.22 17:46:17 INFO  compiling root (7 scala sources and 1 java source)
+2024.04.22 17:46:17 INFO  time: compiled root in 0.97s
+2024.04.22 17:51:31 INFO  compiling root (7 scala sources and 1 java source)
+2024.04.22 17:51:34 INFO  time: compiled root in 2.88s
+2024.04.22 17:51:34 INFO  compiling root (7 scala sources and 1 java source)
+2024.04.22 17:51:34 INFO  time: compiled root in 0.82s
+2024.04.22 18:08:39 INFO  Shutting down server
+2024.04.22 18:08:39 INFO  shutting down Metals
+2024.04.22 18:08:39 INFO  Shut down connection with build server.
+2024.04.22 18:08:39 INFO  Shut down connection with build server.
+2024.04.22 18:08:39 INFO  Shut down connection with build server.
+2024.04.22 18:08:39 INFO  Exiting server
+2024.04.22 18:09:06 INFO  Started: Metals version 1.3.0+30-f09200f0-SNAPSHOT in folders 'C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp' for client Visual Studio Code - Insiders 1.89.0-insider.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@238e5dff]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@7975f689]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@238e5dff]
+2024.04.22 18:09:08 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.04.22 18:09:09 INFO  Attempting to connect to the build server...
+2024.04.22 18:09:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.22 18:09:09 INFO  Attempting to connect to the build server...
+2024.04.22 18:09:09 INFO  Attempting to connect to the build server...
+2024.04.22 18:09:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.22 18:09:09 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.22 18:09:09 INFO  time: Connected to build server in 0.97s
+2024.04.22 18:09:09 INFO  Connected to Build server: Bloop v1.5.17
+2024.04.22 18:09:10 INFO  time: Imported build in 0.6s
+2024.04.22 18:11:12 INFO  time: indexed workspace in 2m1s
+error: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\.tmp\.metals\.tmp\Main-4749668577133489849.scala is not a file
+2024.04.23 07:32:57 INFO  Started: Metals version 1.3.0+30-f09200f0-SNAPSHOT in folders 'C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp' for client Visual Studio Code - Insiders 1.89.0-insider.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@33fe0458]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@754daaf2]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@33fe0458]
+2024.04.23 07:33:02 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.04.23 07:33:02 INFO  Attempting to connect to the build server...
+2024.04.23 07:33:16 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.23 07:33:16 INFO  Attempting to connect to the build server...
+2024.04.23 07:33:16 INFO  Attempting to connect to the build server...
+2024.04.23 07:33:16 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.23 07:33:17 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.23 07:33:16 INFO  time: Connected to build server in 14s
+2024.04.23 07:33:16 INFO  Connected to Build server: Bloop v1.5.17
+2024.04.23 07:33:17 INFO  time: Imported build in 0.59s
+2024.04.23 07:35:33 INFO  time: indexed workspace in 2m15s
+2024.04.23 11:40:25 INFO  compiling root (7 scala sources and 1 java source)
+2024.04.23 11:40:28 INFO  time: compiled root in 3.17s
+2024.04.23 11:53:02 INFO  compiling root (7 scala sources and 1 java source)
+2024.04.23 11:53:04 INFO  time: compiled root in 2.74s
+2024.04.23 11:53:10 INFO  compiling root (7 scala sources and 1 java source)
+2024.04.23 11:53:12 INFO  time: compiled root in 1.61s
+Apr. 23, 2024 11:56:53 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 46
+Apr. 23, 2024 11:56:59 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_45/1#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:648)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 16 more
+
+2024.04.23 11:57:05 INFO  compiling root (7 scala sources and 1 java source)
+2024.04.23 11:57:12 WARN  Unexpected javac output: WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.sourcegraph.shaded.com.sourcegraph.semanticdb_javac.SemanticdbJavacOptions (file:/C:/Users/sti/AppData/Local/bloop/cache/semanticdb/com.sourcegraph.semanticdb-javac.0.9.10/semanticdb-javac-0.9.10.jar) to method com.sun.tools.javac.api.BasicJavacTask.getContext()
+WARNING: Please consider reporting this to the maintainers of com.sourcegraph.shaded.com.sourcegraph.semanticdb_javac.SemanticdbJavacOptions
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\target\scala-2.13\routes\main\controllers\routes.java:4: error: semanticdb-javac: unknown flag '-'
+package controllers;
+^
+C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\target\scala-2.13\routes\main\controllers\routes.java:4: error: semanticdb-javac: unknown flag 'Leicom'
+package controllers;
+^
+C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\target\scala-2.13\routes\main\controllers\routes.java:4: error: semanticdb-javac: unknown flag 'AG/Desktop/ElionaApp/webapp'
+package controllers;
+^
+3 errors.
+2024.04.23 11:57:12 WARN  javac exited with exit code 1
+2024.04.23 11:57:12 INFO  time: compiled root in 6.72s
+Apr. 23, 2024 12:01:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
+2024.04.23 12:19:21 INFO  Shutting down server
+2024.04.23 12:19:21 INFO  shutting down Metals
+2024.04.23 12:19:21 INFO  Shut down connection with build server.
+2024.04.23 12:19:21 INFO  Shut down connection with build server.
+2024.04.23 12:19:21 INFO  Shut down connection with build server.
+2024.04.23 12:19:21 INFO  Exiting server
+2024.04.23 12:20:13 INFO  Started: Metals version 1.3.0+30-f09200f0-SNAPSHOT in folders 'C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp' for client Visual Studio Code - Insiders 1.89.0-insider.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@15a071a5]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@38d829b2]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@15a071a5]
+2024.04.23 12:20:14 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.04.23 12:20:15 INFO  Attempting to connect to the build server...
+2024.04.23 12:20:15 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.23 12:20:16 INFO  Attempting to connect to the build server...
+2024.04.23 12:20:16 INFO  Attempting to connect to the build server...
+2024.04.23 12:20:16 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.23 12:20:16 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.23 12:20:16 INFO  time: Connected to build server in 1.51s
+2024.04.23 12:20:16 INFO  Connected to Build server: Bloop v1.5.17
+2024.04.23 12:20:17 INFO  time: Imported build in 0.5s
+2024.04.23 12:22:31 INFO  time: indexed workspace in 2m13s
+Apr. 23, 2024 12:38:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
+2024.04.23 13:00:27 INFO  compiling root (7 scala sources and 1 java source)
+2024.04.23 13:00:32 WARN  Unexpected javac output: WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.sourcegraph.shaded.com.sourcegraph.semanticdb_javac.SemanticdbJavacOptions (file:/C:/Users/sti/AppData/Local/bloop/cache/semanticdb/com.sourcegraph.semanticdb-javac.0.9.10/semanticdb-javac-0.9.10.jar) to method com.sun.tools.javac.api.BasicJavacTask.getContext()
+WARNING: Please consider reporting this to the maintainers of com.sourcegraph.shaded.com.sourcegraph.semanticdb_javac.SemanticdbJavacOptions
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\target\scala-2.13\routes\main\controllers\routes.java:4: error: semanticdb-javac: unknown flag '-'
+package controllers;
+^
+C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\target\scala-2.13\routes\main\controllers\routes.java:4: error: semanticdb-javac: unknown flag 'Leicom'
+package controllers;
+^
+C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\target\scala-2.13\routes\main\controllers\routes.java:4: error: semanticdb-javac: unknown flag 'AG/Desktop/ElionaApp/webapp'
+package controllers;
+^
+3 errors.
+2024.04.23 13:00:32 WARN  javac exited with exit code 1
+2024.04.23 13:00:32 INFO  time: compiled root in 5.82s
+2024.04.23 14:34:23 INFO  Shutting down server
+2024.04.23 14:34:23 INFO  shutting down Metals
+2024.04.23 14:34:24 INFO  Shut down connection with build server.
+2024.04.23 14:34:24 INFO  Shut down connection with build server.
+2024.04.23 14:34:24 INFO  Shut down connection with build server.
+2024.04.23 14:34:23 INFO  Exiting server
+2024.04.23 14:35:07 INFO  Started: Metals version 1.3.0+30-f09200f0-SNAPSHOT in folders 'C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp' for client Visual Studio Code - Insiders 1.89.0-insider.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@718be88f]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@6ba699f0]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@718be88f]
+2024.04.23 14:35:09 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.04.23 14:35:11 INFO  Attempting to connect to the build server...
+2024.04.23 14:35:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.23 14:35:11 INFO  Attempting to connect to the build server...
+2024.04.23 14:35:11 INFO  Attempting to connect to the build server...
+2024.04.23 14:35:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.23 14:35:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.23 14:35:11 INFO  time: Connected to build server in 0.97s
+2024.04.23 14:35:11 INFO  Connected to Build server: Bloop v1.5.17
+2024.04.23 14:35:12 INFO  time: Imported build in 0.68s
+2024.04.23 14:37:43 INFO  time: indexed workspace in 2m30s
+error: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\.tmp\.metals\.tmp\Main2056442978107509218.scala is not a file
