@@ -308,3 +308,1652 @@ SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@6165094
 2024.04.23 15:59:29 INFO  time: Imported build in 0.39s
 2024.04.23 16:01:37 INFO  time: indexed workspace in 2m7s
 error: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\.tmp\.metals\.tmp\Main5571869489299578512.scala is not a file
+2024.04.24 07:32:59 INFO  Started: Metals version 1.3.0+33-ff9d08a3-SNAPSHOT in folders 'C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp' for client Visual Studio Code - Insiders 1.89.0-insider.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@668546e6]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@64c29c12]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@668546e6]
+2024.04.24 07:33:04 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.04.24 07:33:05 INFO  Attempting to connect to the build server...
+2024.04.24 07:33:23 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.24 07:33:23 INFO  Attempting to connect to the build server...
+2024.04.24 07:33:23 INFO  Attempting to connect to the build server...
+2024.04.24 07:33:23 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.24 07:33:23 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.24 07:33:24 INFO  time: Connected to build server in 18s
+2024.04.24 07:33:24 INFO  Connected to Build server: Bloop v1.5.17
+2024.04.24 07:33:24 INFO  time: Imported build in 0.59s
+2024.04.24 07:36:04 INFO  time: indexed workspace in 2m39s
+error: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\.tmp\.metals\.tmp\Main4006412676532342821.scala is not a file
+2024.04.24 15:29:51 INFO  compiling root (1 scala source)
+2024.04.24 15:29:56 INFO  time: compiled root in 4.78s
+2024.04.24 15:53:01 INFO  compiling root (1 scala source)
+Apr. 24, 2024 3:53:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 1
+2024.04.24 15:53:05 INFO  time: compiled root in 3.94s
+Apr. 24, 2024 3:53:05 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 11
+Apr. 24, 2024 3:53:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_139/0#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 16 more
+
+Apr. 24, 2024 3:53:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace
+Apr. 24, 2024 3:54:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_140/0#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 16 more
+
+2024.04.24 15:55:07 INFO  compiling root (1 scala source)
+2024.04.24 15:55:07 INFO  time: compiled root in 0.51s
+Apr. 24, 2024 3:55:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_140/0#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 16 more
+
+Apr. 24, 2024 3:55:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 72
+Apr. 24, 2024 3:55:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 77
+Apr. 24, 2024 3:55:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 79
+Apr. 24, 2024 3:55:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 76
+Apr. 24, 2024 3:55:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 80
+Apr. 24, 2024 3:57:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_143/0#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 16 more
+
+2024.04.24 15:59:14 INFO  compiling root (2 scala sources)
+2024.04.24 15:59:15 INFO  time: compiled root in 1.02s
+Apr. 24, 2024 3:59:19 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_143/0#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 16 more
+
+2024.04.24 15:59:24 INFO  compiling root (2 scala sources)
+2024.04.24 15:59:26 INFO  time: compiled root in 2.08s
+2024.04.24 15:59:48 INFO  compiling root (2 scala sources)
+2024.04.24 15:59:48 INFO  time: compiled root in 0.85s
+2024.04.24 16:00:36 INFO  compiling root (3 scala sources)
+2024.04.24 16:00:37 INFO  time: compiled root in 1.05s
+Apr. 24, 2024 4:00:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_143/1#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 16 more
+
+2024.04.24 16:00:42 INFO  compiling root (3 scala sources)
+2024.04.24 16:00:43 INFO  time: compiled root in 1.16s
+2024.04.24 16:01:00 INFO  time: code lens generation in 8.63s
+2024.04.24 16:01:00 INFO  time: code lens generation in 6.16s
+2024.04.24 16:01:32 INFO  running 'C:\Users\sti\AppData\Local\Coursier\cache\arc\https\github.com\adoptium\temurin11-binaries\releases\download\jdk-11.0.22%252B7\OpenJDK11U-jdk_x64_windows_hotspot_11.0.22_7.zip\jdk-11.0.22+7\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\sti\AppData\Local\Temp\metals5655713899417792258\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.04.24 16:01:42 INFO  [info] welcome to sbt 1.9.8 (Eclipse Adoptium Java 11.0.22)
+2024.04.24 16:01:47 INFO  [info] loading settings for project webapp-build-build-build from metals.sbt ...
+2024.04.24 16:01:48 INFO  [info] loading project definition from C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\project
+2024.04.24 16:01:53 INFO  [info] loading settings for project webapp-build-build from metals.sbt ...
+2024.04.24 16:01:53 INFO  [info] loading project definition from C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project
+2024.04.24 16:02:03 INFO  [success] Generated .bloop\webapp-build-build.json
+2024.04.24 16:02:03 INFO  [success] Total time: 10 s, completed 24.04.2024, 16:02:03
+2024.04.24 16:02:05 INFO  [info] loading settings for project webapp-build from metals.sbt,plugins.sbt ...
+2024.04.24 16:02:05 INFO  [info] loading project definition from C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project
+2024.04.24 16:02:12 INFO  [success] Generated .bloop\webapp-build.json
+2024.04.24 16:02:12 INFO  [success] Total time: 8 s, completed 24.04.2024, 16:02:13
+2024.04.24 16:02:18 INFO  [info] loading settings for project root from build.sbt ...
+2024.04.24 16:02:18 INFO  [info]   __              __
+2024.04.24 16:02:18 INFO  [info]   \ \     ____   / /____ _ __  __
+2024.04.24 16:02:18 INFO  [info]    \ \   / __ \ / // __ `// / / /
+2024.04.24 16:02:18 INFO  [info]    / /  / /_/ // // /_/ // /_/ /
+2024.04.24 16:02:18 INFO  [info]   /_/  / .___//_/ \__,_/ \__, /
+2024.04.24 16:02:18 INFO  [info]       /_/               /____/
+2024.04.24 16:02:18 INFO  [info] 
+2024.04.24 16:02:18 INFO  [info] Version 3.0.2 running Java 11.0.22
+2024.04.24 16:02:18 INFO  [info] 
+2024.04.24 16:02:18 INFO  [info] Play is run entirely by the community. Please consider contributing and/or donating:
+2024.04.24 16:02:18 INFO  [info] https://www.playframework.com/sponsors
+2024.04.24 16:02:18 INFO  [info] 
+2024.04.24 16:02:19 INFO  [error] C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\conf\routes:14: Compilation error[Missing parameter in call definition: path]
+2024.04.24 16:02:19 INFO  [error] GET     /*path                       controllers.SPAController.index
+2024.04.24 16:02:19 INFO  [error]          ^
+2024.04.24 16:02:36 INFO  [success] Generated .bloop\root-test.json
+2024.04.24 16:02:36 INFO  [error] Couldn't run bloopGenerate. The issue could be caused by failing to compile the project.
+2024.04.24 16:02:36 INFO  [warn] Removed stale C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.bloop\root.json
+2024.04.24 16:02:36 INFO  [error] (Compile / playRoutes) @85a8ge83m: Compilation error[Missing parameter in call definition: path] in C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\conf\routes:14
+2024.04.24 16:02:36 INFO  [error] Total time: 17 s, completed 24.04.2024, 16:02:36
+2024.04.24 16:02:36 INFO  time: ran 'sbt bloopInstall' in 1m3s
+2024.04.24 16:02:36 ERROR sbt command failed: C:\Users\sti\AppData\Local\Coursier\cache\arc\https\github.com\adoptium\temurin11-binaries\releases\download\jdk-11.0.22%252B7\OpenJDK11U-jdk_x64_windows_hotspot_11.0.22_7.zip\jdk-11.0.22+7\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\sti\AppData\Local\Temp\metals5655713899417792258\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall
+2024.04.24 16:02:36 INFO  Disconnecting from Bloop session...
+2024.04.24 16:02:36 INFO  Shut down connection with build server.
+2024.04.24 16:02:36 INFO  Shut down connection with build server.
+2024.04.24 16:02:36 INFO  Shut down connection with build server.
+2024.04.24 16:02:36 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\build.sbt. Using presentation compiler with project's scala-library version: 2.13.13
+2024.04.24 16:02:36 INFO  Attempting to connect to the build server...
+2024.04.24 16:02:36 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.24 16:02:36 INFO  Attempting to connect to the build server...
+2024.04.24 16:02:36 INFO  Attempting to connect to the build server...
+2024.04.24 16:02:36 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.24 16:02:36 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.24 16:02:36 INFO  time: Connected to build server in 0.36s
+2024.04.24 16:02:36 INFO  Connected to Build server: Bloop v1.5.17
+2024.04.24 16:02:36 INFO  time: Imported build in 0.26s
+2024.04.24 16:02:48 INFO  skipping build import with status 'Started'
+2024.04.24 16:02:59 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\dao\CandlestickDao .scala. Using presentation compiler with project's scala-library version: 2.13.13
+2024.04.24 16:02:59 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\dao\CandlestickDao .scala. Using presentation compiler with project's scala-library version: 2.13.13
+2024.04.24 16:02:59 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\dao\CandlestickDao .scala
+2024.04.24 16:02:59 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\dao\CandlestickDao .scala. Using presentation compiler with project's scala-library version: 2.13.13
+2024.04.24 16:03:00 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\dao\CandlestickDao .scala. Using presentation compiler with project's scala-library version: 2.13.13
+2024.04.24 16:04:49 INFO  time: indexed workspace in 2m12s
+2024.04.24 16:04:49 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala
+2024.04.24 16:04:49 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala
+2024.04.24 16:04:49 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\dao\CandlestickDao .scala
+2024.04.24 16:05:17 INFO  running 'C:\Users\sti\AppData\Local\Coursier\cache\arc\https\github.com\adoptium\temurin11-binaries\releases\download\jdk-11.0.22%252B7\OpenJDK11U-jdk_x64_windows_hotspot_11.0.22_7.zip\jdk-11.0.22+7\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\sti\AppData\Local\Temp\metals7652446591083409530\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.04.24 16:05:21 INFO  [info] welcome to sbt 1.9.8 (Eclipse Adoptium Java 11.0.22)
+2024.04.24 16:05:21 INFO  [info] loading settings for project webapp-build-build-build from metals.sbt ...
+2024.04.24 16:05:23 INFO  [info] loading project definition from C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\project
+2024.04.24 16:05:25 INFO  [info] loading settings for project webapp-build-build from metals.sbt ...
+2024.04.24 16:05:25 INFO  [info] loading project definition from C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project
+2024.04.24 16:05:30 INFO  [success] Generated .bloop\webapp-build-build.json
+2024.04.24 16:05:30 INFO  [success] Total time: 5 s, completed 24.04.2024, 16:05:30
+2024.04.24 16:05:30 INFO  [info] loading settings for project webapp-build from metals.sbt,plugins.sbt ...
+2024.04.24 16:05:31 INFO  [info] loading project definition from C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project
+2024.04.24 16:05:33 INFO  [success] Generated .bloop\webapp-build.json
+2024.04.24 16:05:33 INFO  [success] Total time: 3 s, completed 24.04.2024, 16:05:34
+2024.04.24 16:05:39 INFO  [info] loading settings for project root from build.sbt ...
+2024.04.24 16:05:39 INFO  [info]   __              __
+2024.04.24 16:05:39 INFO  [info]   \ \     ____   / /____ _ __  __
+2024.04.24 16:05:39 INFO  [info]    \ \   / __ \ / // __ `// / / /
+2024.04.24 16:05:39 INFO  [info]    / /  / /_/ // // /_/ // /_/ /
+2024.04.24 16:05:39 INFO  [info]   /_/  / .___//_/ \__,_/ \__, /
+2024.04.24 16:05:39 INFO  [info]       /_/               /____/
+2024.04.24 16:05:39 INFO  [info] 
+2024.04.24 16:05:39 INFO  [info] Version 3.0.2 running Java 11.0.22
+2024.04.24 16:05:39 INFO  [info] 
+2024.04.24 16:05:39 INFO  [info] Play is run entirely by the community. Please consider contributing and/or donating:
+2024.04.24 16:05:39 INFO  [info] https://www.playframework.com/sponsors
+2024.04.24 16:05:39 INFO  [info] 
+2024.04.24 16:05:40 INFO  [error] C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\conf\routes:14: Compilation error[Missing parameter in call definition: path]
+2024.04.24 16:05:40 INFO  [error] GET     /*path                       controllers.SPAController.index
+2024.04.24 16:05:40 INFO  [error]          ^
+Apr. 24, 2024 4:05:46 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 288
+2024.04.24 16:05:47 INFO  [error] Couldn't run bloopGenerate. The issue could be caused by failing to compile the project.
+2024.04.24 16:05:47 INFO  [warn] Removed stale C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.bloop\root-test.json
+2024.04.24 16:05:47 INFO  [error] java.lang.RuntimeException: found version conflict(s) in library dependencies; some are suspected to be binary incompatible:
+2024.04.24 16:05:47 INFO  [error] 
+2024.04.24 16:05:47 INFO  [error] 	* org.scala-lang.modules:scala-xml_2.13:2.2.0 (early-semver) is selected over 1.2.0
+2024.04.24 16:05:47 INFO  [error] 	    +- org.playframework.twirl:twirl-api_2.13:2.0.4       (depends on 2.2.0)
+2024.04.24 16:05:47 INFO  [error] 	    +- com.typesafe.play:twirl-api_2.13:1.5.0             (depends on 1.2.0)
+2024.04.24 16:05:47 INFO  [error] 
+2024.04.24 16:05:47 INFO  [error] 
+2024.04.24 16:05:47 INFO  [error] this can be overridden using libraryDependencySchemes or evictionErrorLevel
+2024.04.24 16:05:47 INFO  [error] 	at scala.sys.package$.error(package.scala:30)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.internal.LibraryManagement$.resolve$1(LibraryManagement.scala:90)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$12(LibraryManagement.scala:134)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.util.Tracked$.$anonfun$lastOutput$1(Tracked.scala:74)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$20(LibraryManagement.scala:147)
+2024.04.24 16:05:47 INFO  [error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:228)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11(LibraryManagement.scala:147)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11$adapted(LibraryManagement.scala:128)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.util.Tracked$.$anonfun$inputChangedW$1(Tracked.scala:220)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.internal.LibraryManagement$.cachedUpdate(LibraryManagement.scala:161)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.Classpaths$.$anonfun$updateTask0$1(Defaults.scala:3801)
+2024.04.24 16:05:47 INFO  [error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:63)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.Execute.work(Execute.scala:292)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+2024.04.24 16:05:47 INFO  [error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+2024.04.24 16:05:47 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2024.04.24 16:05:47 INFO  [error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+2024.04.24 16:05:47 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2024.04.24 16:05:47 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+2024.04.24 16:05:47 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+2024.04.24 16:05:47 INFO  [error] 	at java.base/java.lang.Thread.run(Thread.java:829)
+2024.04.24 16:05:47 INFO  [error] (Compile / playRoutes) @85a8gpjjb: Compilation error[Missing parameter in call definition: path] in C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\conf\routes:14
+2024.04.24 16:05:47 INFO  [error] (update) found version conflict(s) in library dependencies; some are suspected to be binary incompatible:
+2024.04.24 16:05:47 INFO  [error] 
+2024.04.24 16:05:47 INFO  [error] 	* org.scala-lang.modules:scala-xml_2.13:2.2.0 (early-semver) is selected over 1.2.0
+2024.04.24 16:05:47 INFO  [error] 	    +- org.playframework.twirl:twirl-api_2.13:2.0.4       (depends on 2.2.0)
+2024.04.24 16:05:47 INFO  [error] 	    +- com.typesafe.play:twirl-api_2.13:1.5.0             (depends on 1.2.0)
+2024.04.24 16:05:47 INFO  [error] 
+2024.04.24 16:05:47 INFO  [error] 
+2024.04.24 16:05:47 INFO  [error] this can be overridden using libraryDependencySchemes or evictionErrorLevel
+2024.04.24 16:05:47 INFO  [error] Total time: 8 s, completed 24.04.2024, 16:05:48
+2024.04.24 16:05:48 INFO  time: ran 'sbt bloopInstall' in 30s
+2024.04.24 16:05:48 ERROR sbt command failed: C:\Users\sti\AppData\Local\Coursier\cache\arc\https\github.com\adoptium\temurin11-binaries\releases\download\jdk-11.0.22%252B7\OpenJDK11U-jdk_x64_windows_hotspot_11.0.22_7.zip\jdk-11.0.22+7\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\sti\AppData\Local\Temp\metals7652446591083409530\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall
+2024.04.24 16:05:48 INFO  Disconnecting from Bloop session...
+2024.04.24 16:05:48 INFO  Shut down connection with build server.
+2024.04.24 16:05:48 INFO  Shut down connection with build server.
+2024.04.24 16:05:48 INFO  Shut down connection with build server.
+2024.04.24 16:05:48 INFO  Attempting to connect to the build server...
+2024.04.24 16:05:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.24 16:05:48 INFO  Attempting to connect to the build server...
+2024.04.24 16:05:48 INFO  Attempting to connect to the build server...
+2024.04.24 16:05:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.24 16:05:48 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.24 16:05:48 INFO  time: Connected to build server in 0.19s
+2024.04.24 16:05:48 INFO  Connected to Build server: Bloop v1.5.17
+2024.04.24 16:05:48 INFO  time: Imported build in 0.2s
+2024.04.24 16:06:39 INFO  time: indexed workspace in 50s
+2024.04.24 16:06:39 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala
+2024.04.24 16:06:39 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala
+2024.04.24 16:06:39 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\dao\CandlestickDao .scala
+Apr. 24, 2024 4:08:15 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_148/1#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+Apr. 24, 2024 4:08:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_148/1#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:08:37 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:08:38 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:08:38 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:08:39 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:09:01 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_148/4#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:09:04 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:09:04 WARN  Using indexes to guess the definition of CandlestickDao
+Apr. 24, 2024 4:09:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_148/4#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+Apr. 24, 2024 4:09:29 PM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\.reports\metals-full\2024-04-24\r_compiler-error_(webapp-build)_16-09-29-910.md
+2024.04.24 16:09:42 INFO  running 'C:\Users\sti\AppData\Local\Coursier\cache\arc\https\github.com\adoptium\temurin11-binaries\releases\download\jdk-11.0.22%252B7\OpenJDK11U-jdk_x64_windows_hotspot_11.0.22_7.zip\jdk-11.0.22+7\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\sti\AppData\Local\Temp\metals10139324174557535754\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.04.24 16:09:46 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:09:46 INFO  [info] welcome to sbt 1.9.8 (Eclipse Adoptium Java 11.0.22)
+2024.04.24 16:09:46 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:09:46 INFO  [info] loading settings for project webapp-build-build-build from metals.sbt ...
+2024.04.24 16:09:48 INFO  [info] loading project definition from C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\project
+2024.04.24 16:09:49 INFO  [info] loading settings for project webapp-build-build from metals.sbt ...
+2024.04.24 16:09:49 INFO  [info] loading project definition from C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project
+2024.04.24 16:09:52 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:09:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 360
+2024.04.24 16:09:55 INFO  [success] Generated .bloop\webapp-build-build.json
+2024.04.24 16:09:55 INFO  [success] Total time: 6 s, completed 24.04.2024, 16:09:55
+2024.04.24 16:09:55 INFO  [info] loading settings for project webapp-build from metals.sbt,plugins.sbt ...
+2024.04.24 16:09:56 INFO  [info] loading project definition from C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project
+2024.04.24 16:09:59 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:09:59 INFO  [success] Generated .bloop\webapp-build.json
+2024.04.24 16:09:59 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:09:59 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:09:59 INFO  [success] Total time: 3 s, completed 24.04.2024, 16:10:00
+2024.04.24 16:10:01 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:10:05 INFO  [info] loading settings for project root from build.sbt ...
+2024.04.24 16:10:05 INFO  [info]   __              __
+2024.04.24 16:10:05 INFO  [info]   \ \     ____   / /____ _ __  __
+2024.04.24 16:10:05 INFO  [info]    \ \   / __ \ / // __ `// / / /
+2024.04.24 16:10:05 INFO  [info]    / /  / /_/ // // /_/ // /_/ /
+2024.04.24 16:10:05 INFO  [info]   /_/  / .___//_/ \__,_/ \__, /
+2024.04.24 16:10:05 INFO  [info]       /_/               /____/
+2024.04.24 16:10:05 INFO  [info] 
+2024.04.24 16:10:05 INFO  [info] Version 3.0.2 running Java 11.0.22
+2024.04.24 16:10:05 INFO  [info] 
+2024.04.24 16:10:05 INFO  [info] Play is run entirely by the community. Please consider contributing and/or donating:
+2024.04.24 16:10:05 INFO  [info] https://www.playframework.com/sponsors
+2024.04.24 16:10:05 INFO  [info] 
+2024.04.24 16:10:07 INFO  [error] C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\conf\routes:14: Compilation error[Missing parameter in call definition: path]
+2024.04.24 16:10:07 INFO  [error] GET     /*path                       controllers.SPAController.index
+2024.04.24 16:10:07 INFO  [error]          ^
+2024.04.24 16:10:09 INFO  [error] Couldn't run bloopGenerate. The issue could be caused by failing to compile the project.
+2024.04.24 16:10:09 INFO  [error] java.lang.RuntimeException: found version conflict(s) in library dependencies; some are suspected to be binary incompatible:
+2024.04.24 16:10:09 INFO  [error] 
+2024.04.24 16:10:09 INFO  [error] 	* org.scala-lang.modules:scala-xml_2.13:2.2.0 (early-semver) is selected over 1.2.0
+2024.04.24 16:10:09 INFO  [error] 	    +- com.example:webapp_2.13:1.0-SNAPSHOT               (depends on 2.2.0)
+2024.04.24 16:10:09 INFO  [error] 	    +- org.playframework.twirl:twirl-api_2.13:2.0.4       (depends on 2.2.0)
+2024.04.24 16:10:09 INFO  [error] 	    +- com.typesafe.play:twirl-api_2.13:1.5.0             (depends on 1.2.0)
+2024.04.24 16:10:09 INFO  [error] 
+2024.04.24 16:10:09 INFO  [error] 
+2024.04.24 16:10:09 INFO  [error] this can be overridden using libraryDependencySchemes or evictionErrorLevel
+2024.04.24 16:10:09 INFO  [error] 	at scala.sys.package$.error(package.scala:30)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.internal.LibraryManagement$.resolve$1(LibraryManagement.scala:90)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$12(LibraryManagement.scala:134)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.util.Tracked$.$anonfun$lastOutput$1(Tracked.scala:74)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$20(LibraryManagement.scala:147)
+2024.04.24 16:10:09 INFO  [error] 	at scala.util.control.Exception$Catch.apply(Exception.scala:228)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11(LibraryManagement.scala:147)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11$adapted(LibraryManagement.scala:128)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.util.Tracked$.$anonfun$inputChangedW$1(Tracked.scala:220)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.internal.LibraryManagement$.cachedUpdate(LibraryManagement.scala:161)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.Classpaths$.$anonfun$updateTask0$1(Defaults.scala:3801)
+2024.04.24 16:10:09 INFO  [error] 	at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:63)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.Execute.work(Execute.scala:292)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+2024.04.24 16:10:09 INFO  [error] 	at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+2024.04.24 16:10:09 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2024.04.24 16:10:09 INFO  [error] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+2024.04.24 16:10:09 INFO  [error] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+2024.04.24 16:10:09 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+2024.04.24 16:10:09 INFO  [error] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+2024.04.24 16:10:09 INFO  [error] 	at java.base/java.lang.Thread.run(Thread.java:829)
+2024.04.24 16:10:09 INFO  [error] (Compile / playRoutes) @85a8hennl: Compilation error[Missing parameter in call definition: path] in C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\conf\routes:14
+2024.04.24 16:10:09 INFO  [error] (update) found version conflict(s) in library dependencies; some are suspected to be binary incompatible:
+2024.04.24 16:10:09 INFO  [error] 
+2024.04.24 16:10:09 INFO  [error] 	* org.scala-lang.modules:scala-xml_2.13:2.2.0 (early-semver) is selected over 1.2.0
+2024.04.24 16:10:09 INFO  [error] 	    +- com.example:webapp_2.13:1.0-SNAPSHOT               (depends on 2.2.0)
+2024.04.24 16:10:09 INFO  [error] 	    +- org.playframework.twirl:twirl-api_2.13:2.0.4       (depends on 2.2.0)
+2024.04.24 16:10:09 INFO  [error] 	    +- com.typesafe.play:twirl-api_2.13:1.5.0             (depends on 1.2.0)
+2024.04.24 16:10:09 INFO  [error] 
+2024.04.24 16:10:09 INFO  [error] 
+2024.04.24 16:10:09 INFO  [error] this can be overridden using libraryDependencySchemes or evictionErrorLevel
+2024.04.24 16:10:09 INFO  [error] Total time: 3 s, completed 24.04.2024, 16:10:09
+2024.04.24 16:10:10 INFO  time: ran 'sbt bloopInstall' in 27s
+2024.04.24 16:10:10 ERROR sbt command failed: C:\Users\sti\AppData\Local\Coursier\cache\arc\https\github.com\adoptium\temurin11-binaries\releases\download\jdk-11.0.22%252B7\OpenJDK11U-jdk_x64_windows_hotspot_11.0.22_7.zip\jdk-11.0.22+7\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\sti\AppData\Local\Temp\metals10139324174557535754\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall
+2024.04.24 16:10:10 INFO  Disconnecting from Bloop session...
+2024.04.24 16:10:10 INFO  Shut down connection with build server.
+2024.04.24 16:10:10 INFO  Shut down connection with build server.
+2024.04.24 16:10:10 INFO  Shut down connection with build server.
+2024.04.24 16:10:10 INFO  Attempting to connect to the build server...
+2024.04.24 16:10:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.24 16:10:10 INFO  Attempting to connect to the build server...
+2024.04.24 16:10:10 INFO  Attempting to connect to the build server...
+2024.04.24 16:10:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.24 16:10:10 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.24 16:10:10 INFO  time: Connected to build server in 0.19s
+2024.04.24 16:10:10 INFO  Connected to Build server: Bloop v1.5.17
+2024.04.24 16:10:10 INFO  time: Imported build in 0.14s
+Apr. 24, 2024 4:10:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_149/1#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:10:29 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:10:30 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:10:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_149/2#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:10:39 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:10:42 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:10:42 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:10:42 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:10:42 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:10:42 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:10:43 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:10:44 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:10:46 INFO  time: indexed workspace in 36s
+2024.04.24 16:10:46 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala
+2024.04.24 16:10:46 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala
+2024.04.24 16:10:46 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\dao\CandlestickDao .scala
+2024.04.24 16:10:46 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:06 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:06 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:08 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:08 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:11 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:11 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:13 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:13 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:13 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:14 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:15 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:15 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:16 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:17 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:19 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:20 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:20 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala
+2024.04.24 16:11:20 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:20 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala
+2024.04.24 16:11:20 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:20 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:11:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_149/2#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:11:28 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:28 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:28 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:28 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala
+2024.04.24 16:11:28 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:34 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:34 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:34 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala
+2024.04.24 16:11:34 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:37 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:11:43 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:11:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 513
+2024.04.24 16:13:12 INFO  running 'C:\Users\sti\AppData\Local\Coursier\cache\arc\https\github.com\adoptium\temurin11-binaries\releases\download\jdk-11.0.22%252B7\OpenJDK11U-jdk_x64_windows_hotspot_11.0.22_7.zip\jdk-11.0.22+7\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\sti\AppData\Local\Temp\metals16837512096356813333\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.04.24 16:13:16 INFO  [info] welcome to sbt 1.9.8 (Eclipse Adoptium Java 11.0.22)
+2024.04.24 16:13:16 INFO  [info] loading settings for project webapp-build-build-build from metals.sbt ...
+2024.04.24 16:13:19 INFO  [info] loading project definition from C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\project
+2024.04.24 16:13:21 INFO  [info] loading settings for project webapp-build-build from metals.sbt ...
+2024.04.24 16:13:21 INFO  [info] loading project definition from C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project
+2024.04.24 16:13:24 INFO  user cancelled sbt bloopInstall
+2024.04.24 16:13:25 INFO  time: ran 'sbt bloopInstall' in 12s
+2024.04.24 16:14:08 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:14:10 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:14:10 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:14:10 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:14:50 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:14:50 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:14:51 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:14:51 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala
+2024.04.24 16:14:51 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:14:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_151/0#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:14:59 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:14:59 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:14:59 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:16:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_152/2#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:16:40 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:16:40 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:16:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_152/2#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:16:45 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:16:45 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:17:33 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:17:36 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:17:36 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala
+2024.04.24 16:17:36 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:17:45 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:17:50 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_153/0#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:17:52 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:17:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 622
+2024.04.24 16:17:53 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:17:53 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala
+2024.04.24 16:17:53 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:17:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_153/1#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:18:05 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:05 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:07 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:14 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:15 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:21 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:23 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:25 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:25 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:18:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_153/1#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:18:32 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:32 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:32 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala
+2024.04.24 16:18:32 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:18:34 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_153/1#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:18:35 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala
+2024.04.24 16:18:35 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:35 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:35 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:37 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:37 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:18:37 PM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\.reports\metals-full\2024-04-24\r_compiler-error_16-18-37-578.md
+2024.04.24 16:18:38 ERROR scalafmt: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala:6: error: [dialect scala213] identifier expected but . found
+case class Candlestick(time: Timestamp, ...)(
+                                        ^
+2024.04.24 16:18:38 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala
+2024.04.24 16:18:38 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:18:38 PM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\.reports\metals-full\2024-04-24\r_compiler-error_16-18-38-990.md
+2024.04.24 16:18:39 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:40 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:18:42 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:19:05 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:19:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\.reports\metals-full\2024-04-24\r_compiler-error_16-19-05-082.md
+2024.04.24 16:19:05 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:19:05 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:19:06 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala
+2024.04.24 16:19:05 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:19:06 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:01 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:02 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:03 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:03 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:04 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:05 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:05 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:20:05 PM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\.reports\metals-full\2024-04-24\r_compiler-error_16-20-05-170.md
+2024.04.24 16:20:06 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:06 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:07 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:07 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:08 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:08 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:08 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:09 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala
+2024.04.24 16:20:09 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:11 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:13 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:20:19 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala
+2024.04.24 16:20:19 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:21:33 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:22 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:22 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:22:22 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 798
+2024.04.24 16:22:22 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:22:22 PM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\.reports\metals-full\2024-04-24\r_compiler-error_16-22-22-562.md
+2024.04.24 16:22:22 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:23 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:23 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:23 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:23 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:23 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:23 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:25 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala
+2024.04.24 16:22:25 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:29 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:35 INFO  no build target found for c:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:36 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:37 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala
+2024.04.24 16:22:37 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:50 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:52 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:52 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:22:53 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala
+2024.04.24 16:22:53 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:25:23 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_157/0#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:26:39 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:26:39 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:26:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_158/1#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:26:48 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:26:48 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 24, 2024 4:26:49 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_157/0#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at jdk.internal.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 15 more
+
+2024.04.24 16:26:50 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:26:52 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:26:52 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:26:52 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:26:53 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:26:54 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:26:54 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala
+2024.04.24 16:26:54 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:26:57 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:26:59 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:27:00 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:27:08 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:27:16 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:27:17 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:27:17 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:27:17 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:27:17 WARN  Using indexes to guess the definition of JsNumber
+2024.04.24 16:27:17 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\Candlestick.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:27:23 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\dao\CandlestickDao .scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:27:23 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\dao\CandlestickDao .scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:27:30 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\SPAController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:27:31 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:27:31 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:27:35 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.24 16:27:37 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:27:08 INFO  Started: Metals version 1.3.0+33-ff9d08a3-SNAPSHOT in folders 'C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp' for client Visual Studio Code - Insiders 1.89.0-insider.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@41f87800]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@44dff15e]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@41f87800]
+2024.04.25 08:27:14 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.04.25 08:27:15 INFO  Attempting to connect to the build server...
+2024.04.25 08:27:33 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.25 08:27:34 INFO  Attempting to connect to the build server...
+2024.04.25 08:27:34 INFO  Attempting to connect to the build server...
+2024.04.25 08:27:34 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.25 08:27:34 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\project\.metals\bsp.trace.json or C:\Users\sti\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.04.25 08:27:34 INFO  time: Connected to build server in 19s
+2024.04.25 08:27:34 INFO  Connected to Build server: Bloop v1.5.17
+2024.04.25 08:27:35 INFO  time: Imported build in 0.49s
+2024.04.25 08:28:51 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:29:02 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:29:10 INFO  time: indexed workspace in 1m35s
+2024.04.25 08:29:10 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala
+2024.04.25 08:29:10 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:29:11 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\controllers\HomeController.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:29:11 INFO  time: code lens generation in 1.14s
+2024.04.25 08:29:12 INFO  time: code lens generation in 1.21s
+2024.04.25 08:29:12 INFO  time: code lens generation in 1.22s
+2024.04.25 08:32:14 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:32:14 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:32:14 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 25, 2024 8:32:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 32
+Apr. 25, 2024 8:32:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 33
+Apr. 25, 2024 8:32:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 36
+Apr. 25, 2024 8:32:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 37
+Apr. 25, 2024 8:32:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 39
+Apr. 25, 2024 8:32:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 40
+Apr. 25, 2024 8:32:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 41
+Apr. 25, 2024 8:32:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 42
+Apr. 25, 2024 8:32:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 43
+Apr. 25, 2024 8:32:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 44
+Apr. 25, 2024 8:32:18 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 45
+2024.04.25 08:32:21 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:33:06 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:33:06 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:33:07 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:33:06 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala
+2024.04.25 08:33:07 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\models\JsonFormatters.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:33:15 INFO  time: code lens generation in 1.17s
+2024.04.25 08:33:15 INFO  time: code lens generation in 1.56s
+Apr. 25, 2024 8:33:28 AM scala.meta.internal.pc.CompilerAccess handleError
+SCHWERWIEGEND: A severe compiler error occurred, full details of the error can be found in the error report C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\.metals\.reports\metals-full\2024-04-25\r_compiler-error_(webapp-build)_08-33-28-528.md
+Apr. 25, 2024 8:33:34 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 105
+2024.04.25 08:34:58 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:34:58 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:35:27 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.04.25 08:35:27 INFO  no build target found for /scala/collection/generic/GenericCompanion.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.04.25 08:35:27 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 25, 2024 8:36:00 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_162/0#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 16 more
+
+Apr. 25, 2024 8:36:04 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 183
+Apr. 25, 2024 8:36:04 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNUNG: Unmatched cancel notification for request id 185
+2024.04.25 08:36:04 INFO  skipping build import with status 'Dismissed'
+2024.04.25 08:36:11 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 25, 2024 8:36:13 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_162/1#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 16 more
+
+2024.04.25 08:36:15 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala
+2024.04.25 08:36:16 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:16 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:16 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:16 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:16 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:25 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:25 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:26 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:26 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:26 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:27 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:27 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:27 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:29 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:29 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 25, 2024 8:36:32 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNUNG: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "vscode-chat-code-block://2ee58c21-ef22-439c-af09-63dcb119f6fb/response_162/3#%7B%22references%22%3A%5B%5D%7D"
+  ]
+}
+java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:67)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	... 11 more
+Caused by: java.nio.file.FileSystemNotFoundException: Provider "vscode-chat-code-block" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:131)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:187)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:738)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:735)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:675)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:43)
+	... 16 more
+
+2024.04.25 08:36:36 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:36 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:36 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:40 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:40 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:40 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala
+2024.04.25 08:36:40 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:36:40 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:38:24 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:03 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:04 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:04 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:05 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:05 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:05 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:06 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:13 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:13 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:13 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:13 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:15 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:15 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:15 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:17 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:17 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala
+2024.04.25 08:39:17 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:26 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:26 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:30 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:30 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:33 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:33 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:40 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:41 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:41 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:41 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:41 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:44 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:44 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:44 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:44 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:44 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:44 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:45 WARN  no build target for: C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala
+2024.04.25 08:39:45 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:39:45 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+2024.04.25 08:43:09 INFO  no build target found for C:\Users\sti\OneDrive - Leicom AG\Desktop\ElionaApp\webapp\app\services\TursoDataService.scala. Using presentation compiler with project's scala-library version: 2.12.18
+Apr. 25, 2024 9:38:46 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFORMATION: Unsupported notification method: $/setTrace

@@ -9,7 +9,7 @@
     "generate-pwa-assets": "pwa-assets-generator"
   },
   "dependencies": {
-    "axios": "^1.6.2",
+    "axios": "^1.6.8",
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.2",
     "jquery": "^3.7.1",

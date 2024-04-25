@@ -11,4 +11,5 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 # Catch-all route for SPA - This should be the last route!
 # It serves the Vue.js SPA for any non-matched routes
-GET     /*path                       controllers.SPAController.index
+GET     /*path                       controllers.SPAController.index(path)
+GET     /candlestickData     controllers.HomeController.getCandlestickData

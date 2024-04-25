@@ -5,7 +5,7 @@ import FinancialChart from '../pages/FinancialChart.vue';
 
 const routes = [
   {
-    path: '/hello-world',
+    path: '/',
     name: 'HelloWorld',
     component: HelloWorld,
   },
