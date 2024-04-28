@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Sidebar from '../components/Sidebar.vue';
 import Header from '../components/Header.vue'; // Corrected import for Header
+import Sidebar from '../components/Sidebar.vue';
 
 export default {
   components: {

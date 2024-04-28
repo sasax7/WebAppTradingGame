@@ -13,6 +13,18 @@
             <span v-if="!drawerMini">Financial Chart</span>
           </v-btn>
         </v-list-item>
+        <v-list-item>
+        <v-btn text to="/dashboard" block>
+          <v-icon left>mdi-view-dashboard</v-icon>
+          <span v-if="!drawerMini">Dashboard</span>
+        </v-btn>
+      </v-list-item>
+      <v-list-item>
+        <v-btn text to="/strategies" block>
+          <v-icon left>mdi-strategy</v-icon>
+          <span v-if="!drawerMini">Strategies</span>
+        </v-btn>
+      </v-list-item>
         <v-list-item @click="toggleDrawer">
         <v-btn text block>
           <v-icon left>{{ drawerMini ? 'mdi-arrow-right' : 'mdi-arrow-left' }}</v-icon>

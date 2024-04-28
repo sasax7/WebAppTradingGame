@@ -1,11 +1,13 @@
 <template>
   <v-app>
-      <router-view/>
+    <router-view/>
   </v-app>
 </template>
+
 <script>
-import Header from './components/Header.vue';
+import 'vue3-toastify/dist/index.css';
 import Footer from './components/Footer.vue';
+import Header from './components/Header.vue';
 import Sidebar from './components/Sidebar.vue';
 import FinancialChart from './pages/FinancialChart.vue';
 import HelloWorld from './pages/HelloWorld.vue';
