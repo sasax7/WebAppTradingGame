@@ -15,7 +15,7 @@ import HeaderSidebarLayout from "../layouts/HeaderSidebarLayout.vue";
 import GetCandlestickData from '@/components/GetCandlestickData.vue';
 import StrategyDropdown from '@/components/StrategyDropdown.vue';
 import StrategyInput from '@/components/StrategyInput.vue'; // Import StrategyInput
-import { createChart } from 'lightweight-charts';
+import { createChart, CrosshairMode } from 'lightweight-charts';
 import { useCookie } from 'vue-cookie-next';
 
 const chartContainer = ref(null);
@@ -28,8 +28,20 @@ const setStrategy = (strategyId) => {
 };
 const setData = (data) => {
   if (chartContainer.value) {
-    const chart = createChart(chartContainer.value, { /* chart configuration */ });
+    const chart = createChart(chartContainer.value, {
+      /* chart configuration */
+      crosshair: {
+        mode: CrosshairMode.Normal,
+      },
+      localization: {
+        priceFormatter: price => price.toFixed(5), // Adjust decimal places as needed
+      },
+    });
     const candleSeries = chart.addCandlestickSeries();
+
+   
+
+   
     candleSeries.setData(data);
   }
 };
