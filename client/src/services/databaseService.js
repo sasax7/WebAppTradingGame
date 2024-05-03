@@ -640,3 +640,48 @@ async function getStopLossTriggeredDate(
     throw error;
   }
 }
+
+/**
+ * Adds an indicator record to the database.
+ *
+ * @param {number} value - The value of the indicator.
+ * @param {number} time - The time at which the indicator was recorded.
+ * @param {number} indicatorNameId - The ID of the indicator name.
+ * @param {number} tradeId - The ID of the trade associated with this indicator.
+ * @returns {Promise<void>}
+ */
+export async function addIndicator(value, time, indicatorNameId, tradeId) {
+  try {
+    const sql = `
+      INSERT INTO Indicators (value, time, indicator_name_id, trade_id)
+      VALUES (?, ?, ?, ?)
+    `;
+    await executeQuery(sql, [value, time, indicatorNameId, tradeId]);
+    console.log("Indicator added successfully");
+  } catch (error) {
+    console.error("Error adding indicator:", error);
+    throw error;
+  }
+}
+/**
+ * Adds a price point record to the database.
+ *
+ * @param {number} value - The value of the price point.
+ * @param {number} time - The time at which the price point was recorded.
+ * @param {number} pricePointNameId - The ID of the price point name.
+ * @param {number} tradeId - The ID of the trade associated with this price point.
+ * @returns {Promise<void>}
+ */
+export async function addPricePoint(value, time, pricePointNameId, tradeId) {
+  try {
+    const sql = `
+      INSERT INTO PricePoint (value, time, pricepoint_name_id, trade_id)
+      VALUES (?, ?, ?, ?)
+    `;
+    await executeQuery(sql, [value, time, pricePointNameId, tradeId]);
+    console.log("Price point added successfully");
+  } catch (error) {
+    console.error("Error adding price point:", error);
+    throw error;
+  }
+}

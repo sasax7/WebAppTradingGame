@@ -81,6 +81,8 @@
 <script setup lang="ts">
 import {
   addAdvancedTrade,
+  addIndicator,
+  addPricePoint,
   getIndicatorNames,
   getPricePointNames,
   getStopLossNames,
@@ -148,6 +150,7 @@ watch(() => props.strategyId, fetchNames);
 
 const submitValues = async () => {
   console.log("values", values);
+  let advancedTrade;
   // Check if the required fields are entered
   if (
     !values.startDate ||
@@ -163,7 +166,7 @@ const submitValues = async () => {
 
   try {
     // Call the function to add the advanced trade
-    await addAdvancedTrade(
+    advancedTrade = await addAdvancedTrade(
       props.strategyId,
       1,
       dateStart,
@@ -175,6 +178,61 @@ const submitValues = async () => {
     console.error("Failed to add advanced trade: " + error.message);
     toast.error("Failed to add advanced trade");
   }
+
+  try {
+    // Existing code to add the advanced trade...
+
+    // Loop through indicatorNames and add each indicator
+    for (const indicator of indicatorNames.value) {
+      const indicatorValue = values[indicator.id].value;
+      let indicatorTime = values[indicator.id].date;
+
+      // Skip adding the indicator if the value is empty
+      if (!indicatorValue) continue;
+
+      // Use current time if the time input is empty
+      if (!indicatorTime) {
+        indicatorTime = new Date().toISOString();
+      }
+
+      // Convert indicatorTime to Unix time in seconds
+      const indicatorTimeUnix = Math.floor(new Date(indicatorTime).getTime() / 1000);
+
+      // Call addIndicator for each indicator
+      console.log("indicatorinputs", indicatorValue, indicatorTimeUnix, indicator.id, advancedTrade.lastInsertRowid
+);
+      await addIndicator(indicatorValue, indicatorTimeUnix, indicator.id, advancedTrade.lastInsertRowid
+);
+    }
+
+    toast.success("indicators added successfully");
+  } catch (error) {
+    console.error("Failed to add advanced trade and indicators: " + error.message);
+    toast.error("Failed to add advanced trade and indicators");
+  }
+  // Add price points based on the provided values
+try {
+  // Loop through pricePointNames and add each price point
+  for (const pricePoint of pricePointNames.value) {
+    const pricePointValue = values[pricePoint.id].value;
+    let pricePointTime = values[pricePoint.id].date;
+
+    // Skip adding the price point if the value or date is empty
+    if (!pricePointValue || !pricePointTime) continue;
+
+    // Convert pricePointTime to Unix time in seconds
+    const pricePointTimeUnix = Math.floor(new Date(pricePointTime).getTime() / 1000);
+
+    // Call addPricePoint for each price point
+    console.log("pricePointInputs", pricePointValue, pricePointTimeUnix, pricePoint.id, advancedTrade.lastInsertRowid);
+    await addPricePoint(pricePointValue, pricePointTimeUnix, pricePoint.id, advancedTrade.lastInsertRowid);
+  }
+
+  toast.success("Price points added successfully");
+} catch (error) {
+  console.error("Failed to add price points: " + error.message);
+  toast.error("Failed to add price points");
+}
 };
 </script>
 <style scoped>
