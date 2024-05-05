@@ -83,6 +83,8 @@ import {
   addAdvancedTrade,
   addIndicator,
   addPricePoint,
+  addStopLoss,
+  addTakeProfit,
   getIndicatorNames,
   getPricePointNames,
   getStopLossNames,
@@ -151,6 +153,7 @@ watch(() => props.strategyId, fetchNames);
 const submitValues = async () => {
   console.log("values", values);
   let advancedTrade;
+  let stopLossDetails = {};
   // Check if the required fields are entered
   if (
     !values.startDate ||
@@ -178,7 +181,74 @@ const submitValues = async () => {
     console.error("Failed to add advanced trade: " + error.message);
     toast.error("Failed to add advanced trade");
   }
+  console.log("advancedtrade output", advancedTrade);
+  for (const stopLoss of stopLossNames.value) {
+    const stopLossPrice = parseFloat(values[stopLoss.id]);
+    if (isNaN(stopLossPrice)) continue; // Skip if the stop loss price is not a number
 
+    try {
+      // Assuming stopLossNameId is the id of the stop loss name
+      const stopLossNameId = stopLoss.id;
+
+      // Call addStopLoss for each stop loss
+      console.log(
+        "Adding stop loss:",
+        stopLossPrice,
+        advancedTrade.advancedTradeId,
+        stopLossNameId
+      );
+      const stopLossResult = await addStopLoss(
+        1, // Assuming pairId is 1 for demonstration purposes
+        parseFloat(values.entryPrice),
+        stopLossPrice,
+        advancedTrade.tradeType,
+        advancedTrade.advancedTradeId,
+        advancedTrade.triggeredDate, // Assuming triggeredDate is the start date for simplicity
+        stopLossNameId
+      );
+      toast.success(`Stop loss for ${stopLoss.name} added successfully`);
+      stopLossDetails[stopLossNameId] = stopLossResult;
+    } catch (error) {
+      console.error(
+        `Failed to add stop loss for ${stopLoss.name}: ${error.message}`
+      );
+      toast.error(`Failed to add stop loss for ${stopLoss.name}`);
+    }
+  }
+
+  for (const takeProfit of takeProfitNames.value) {
+    const takeProfitPrice = parseFloat(values[takeProfit.id]);
+    if (isNaN(takeProfitPrice)) continue; // Skip if the take profit price is not a number
+
+    try {
+      // Assuming takeProfitNameId is the id of the take profit name
+      const takeProfitNameId = takeProfit.id;
+
+      // Call addTakeProfit for each take profit
+      console.log(
+        "Adding take profit:",
+        takeProfitPrice,
+        advancedTrade.advancedTradeId,
+        takeProfitNameId
+      );
+      await addTakeProfit(
+        1, // Assuming pairId is 1 for demonstration purposes
+        takeProfitNameId,
+        takeProfitPrice,
+        advancedTrade.tradeType,
+        advancedTrade.advancedTradeId,
+        advancedTrade.triggeredDate,
+        values.entryPrice,
+        stopLossDetails
+      );
+      toast.success(`Take profit for ${takeProfit.name} added successfully`);
+    } catch (error) {
+      console.error(
+        `Failed to add take profit for ${takeProfit.name}: ${error.message}`
+      );
+      toast.error(`Failed to add take profit for ${takeProfit.name}`);
+    }
+  }
   try {
     // Existing code to add the advanced trade...
 
@@ -196,43 +266,69 @@ const submitValues = async () => {
       }
 
       // Convert indicatorTime to Unix time in seconds
-      const indicatorTimeUnix = Math.floor(new Date(indicatorTime).getTime() / 1000);
+      const indicatorTimeUnix = Math.floor(
+        new Date(indicatorTime).getTime() / 1000
+      );
 
       // Call addIndicator for each indicator
-      console.log("indicatorinputs", indicatorValue, indicatorTimeUnix, indicator.id, advancedTrade.lastInsertRowid
-);
-      await addIndicator(indicatorValue, indicatorTimeUnix, indicator.id, advancedTrade.lastInsertRowid
-);
+      console.log(
+        "indicatorinputs",
+        indicatorValue,
+        indicatorTimeUnix,
+        indicator.id,
+        advancedTrade.advancedTradeId
+      );
+      await addIndicator(
+        indicatorValue,
+        indicatorTimeUnix,
+        indicator.id,
+        advancedTrade.advancedTradeId
+      );
     }
 
     toast.success("indicators added successfully");
   } catch (error) {
-    console.error("Failed to add advanced trade and indicators: " + error.message);
+    console.error(
+      "Failed to add advanced trade and indicators: " + error.message
+    );
     toast.error("Failed to add advanced trade and indicators");
   }
   // Add price points based on the provided values
-try {
-  // Loop through pricePointNames and add each price point
-  for (const pricePoint of pricePointNames.value) {
-    const pricePointValue = values[pricePoint.id].value;
-    let pricePointTime = values[pricePoint.id].date;
+  try {
+    // Loop through pricePointNames and add each price point
+    for (const pricePoint of pricePointNames.value) {
+      const pricePointValue = values[pricePoint.id].value;
+      let pricePointTime = values[pricePoint.id].date;
 
-    // Skip adding the price point if the value or date is empty
-    if (!pricePointValue || !pricePointTime) continue;
+      // Skip adding the price point if the value or date is empty
+      if (!pricePointValue || !pricePointTime) continue;
 
-    // Convert pricePointTime to Unix time in seconds
-    const pricePointTimeUnix = Math.floor(new Date(pricePointTime).getTime() / 1000);
+      // Convert pricePointTime to Unix time in seconds
+      const pricePointTimeUnix = Math.floor(
+        new Date(pricePointTime).getTime() / 1000
+      );
 
-    // Call addPricePoint for each price point
-    console.log("pricePointInputs", pricePointValue, pricePointTimeUnix, pricePoint.id, advancedTrade.lastInsertRowid);
-    await addPricePoint(pricePointValue, pricePointTimeUnix, pricePoint.id, advancedTrade.lastInsertRowid);
+      // Call addPricePoint for each price point
+      console.log(
+        "pricePointInputs",
+        pricePointValue,
+        pricePointTimeUnix,
+        pricePoint.id,
+        advancedTrade.advancedTradeId
+      );
+      await addPricePoint(
+        pricePointValue,
+        pricePointTimeUnix,
+        pricePoint.id,
+        advancedTrade.advancedTradeId
+      );
+    }
+
+    toast.success("Price points added successfully");
+  } catch (error) {
+    console.error("Failed to add price points: " + error.message);
+    toast.error("Failed to add price points");
   }
-
-  toast.success("Price points added successfully");
-} catch (error) {
-  console.error("Failed to add price points: " + error.message);
-  toast.error("Failed to add price points");
-}
 };
 </script>
 <style scoped>

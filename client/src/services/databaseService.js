@@ -1,6 +1,7 @@
 // services/databaseService.js
 import { createClient } from "@libsql/client";
 import { get } from "jquery";
+import { h } from "vue";
 const client = createClient({
   url: "libsql://webapptest-sasax7.turso.io",
   authToken:
@@ -455,111 +456,20 @@ export async function addAdvancedTrade(
     // Get the ID of the newly inserted advanced trade
     const advancedTradeId = trade.lastInsertRowid;
 
-    // Now you can access the value directly using the alias
-    await addDefaultStopLoss(
-      strategyId,
-      pairId,
-      dateStart,
-      entryPrice,
-      stopLossPrice,
-      tradeType,
-      advancedTradeId,
-      triggeredDate
-    );
-
-    return trade;
+    return {
+      strategyId: strategyId,
+      pairId: pairId,
+      dateStart: dateStart,
+      entryPrice: entryPrice,
+      stopLossPrice: stopLossPrice,
+      tradeType: tradeType,
+      triggeredDate: triggeredDate,
+      advancedTradeId: advancedTradeId,
+    };
   } catch (error) {
     console.error(error);
     throw error;
   }
-}
-
-export async function addDefaultStopLoss(
-  strategyId,
-  pairId,
-  dateStart,
-  entryPrice,
-  stopLossPrice,
-  tradeType,
-  advancedTradeId,
-  triggeredDate
-) {
-  const defaultStopLossName = await getdefaultStopLossNameAndId(strategyId);
-  console.log("defaultStopLossName", defaultStopLossName);
-  if (!defaultStopLossName) {
-    throw new Error("Default stop loss name not found");
-  }
-  const stopLossNameId = defaultStopLossName[0].id;
-
-  let stopLossTriggerSql; // Declare stopLossTriggerSql outside the if-else block
-
-  if (tradeType) {
-    stopLossTriggerSql =
-      "SELECT MIN(time) AS mintime FROM candlesticks WHERE pair_id = ? AND time > ? AND timeframe = 1.0 AND low >= ? ";
-  } else {
-    stopLossTriggerSql =
-      "SELECT MIN(time) AS mintime FROM candlesticks WHERE pair_id = ? AND time > ? AND timeframe = 1.0 AND high <= ? ";
-  }
-  const stopLossTriggeredDaterows = await executeQuery(stopLossTriggerSql, [
-    pairId,
-    triggeredDate,
-    stopLossPrice,
-  ]);
-
-  if (stopLossTriggeredDaterows.rows.length === 0) {
-    throw new Error("Stop loss not triggered");
-  }
-  // Now you can access the value directly using the alias
-  const stopLossTriggeredDate = await getStopLossTriggeredDate(
-    pairId,
-    triggeredDate,
-    entryPrice,
-    tradeType
-  );
-
-  const highestPrice = await getStopLossHighestPrice(
-    tradeType,
-    pairId,
-    triggeredDate,
-    stopLossTriggeredDate
-  );
-
-  console.log("highestPrice", highestPrice);
-  const risk = Math.abs(entryPrice - stopLossPrice);
-  const reward = Math.abs(highestPrice - entryPrice);
-
-  // Calculate risk-reward ratio
-  let highestriskRewardRatio;
-  if (risk !== 0) {
-    // Prevent division by zero
-    highestriskRewardRatio = reward / risk;
-  } else {
-    throw new Error("Risk is zero, cannot calculate risk-reward ratio.");
-  }
-  const hit1RR = highestriskRewardRatio >= 1 ? true : false;
-  // Insert the default stop loss
-  console.log(
-    "insert stop loss",
-    stopLossPrice,
-    advancedTradeId,
-    stopLossNameId,
-    stopLossTriggeredDate,
-    highestPrice,
-    highestriskRewardRatio,
-    hit1RR
-  );
-  const stopLossSql =
-    "INSERT INTO StopLoss (price, trade_id, stoploss_name_id, timehit, highest_price, highest_RR, hit_1_RR) VALUES (?, ?, ?, ? , ?, ?, ?)";
-  await executeQuery(stopLossSql, [
-    stopLossPrice,
-    advancedTradeId,
-    stopLossNameId,
-    stopLossTriggeredDate,
-    highestPrice,
-    highestriskRewardRatio,
-    hit1RR,
-  ]);
-  console.log("Default stop loss added");
 }
 
 async function getStopLossHighestPrice(
@@ -641,6 +551,77 @@ async function getStopLossTriggeredDate(
   }
 }
 
+export async function addStopLoss(
+  pairId,
+  entryPrice,
+  stopLossPrice,
+  tradeType,
+  advancedTradeId,
+  triggeredDate,
+  stopLossNameId
+) {
+  // Determine the SQL query to find when the stop loss was triggered
+  let stopLossTriggerSql;
+  if (tradeType) {
+    stopLossTriggerSql =
+      "SELECT MIN(time) AS mintime FROM candlesticks WHERE pair_id = ? AND time > ? AND timeframe = 1.0 AND low >= ?";
+  } else {
+    stopLossTriggerSql =
+      "SELECT MIN(time) AS mintime FROM candlesticks WHERE pair_id = ? AND time > ? AND timeframe = 1.0 AND high <= ?";
+  }
+
+  // Execute the query to find the stop loss triggered date
+  const stopLossTriggeredDaterows = await executeQuery(stopLossTriggerSql, [
+    pairId,
+    triggeredDate,
+    stopLossPrice,
+  ]);
+  if (stopLossTriggeredDaterows.rows.length === 0) {
+    throw new Error("Stop loss not triggered");
+  }
+  const stopLossTriggeredDate = stopLossTriggeredDaterows.rows[0].mintime;
+
+  // Calculate the highest price between the triggered date and the stop loss triggered date
+  const highestPrice = await getStopLossHighestPrice(
+    tradeType,
+    pairId,
+    triggeredDate,
+    stopLossTriggeredDate
+  );
+
+  // Calculate risk and reward
+  const risk = Math.abs(entryPrice - stopLossPrice);
+  const reward = Math.abs(highestPrice - entryPrice);
+  if (risk === 0) {
+    throw new Error("Risk is zero, cannot calculate risk-reward ratio.");
+  }
+  const riskRewardRatio = reward / risk;
+  const hit1RR = riskRewardRatio >= 1;
+
+  // Insert the stop loss into the database
+  const stopLossSql =
+    "INSERT INTO StopLoss (price, trade_id, stoploss_name_id, timehit, highest_price, highest_RR, hit_1_RR) VALUES (?, ?, ?, ? , ?, ?, ?)";
+  const insertResult = await executeQuery(stopLossSql, [
+    stopLossPrice,
+    advancedTradeId,
+    stopLossNameId,
+    stopLossTriggeredDate,
+    highestPrice,
+    riskRewardRatio,
+    hit1RR,
+  ]);
+  const stopLossId = insertResult.lastInsertRowid;
+  console.log("Stop loss added successfully");
+  return {
+    stopLossId: stopLossId,
+    triggeredDate: stopLossTriggeredDate,
+    price: stopLossPrice,
+    highestPrice: highestPrice,
+    riskRewardRatio: riskRewardRatio,
+    hit1RR: hit1RR,
+  };
+}
+
 /**
  * Adds an indicator record to the database.
  *
@@ -683,5 +664,118 @@ export async function addPricePoint(value, time, pricePointNameId, tradeId) {
   } catch (error) {
     console.error("Error adding price point:", error);
     throw error;
+  }
+}
+
+export async function addTakeProfit(
+  pairId,
+  takeprofitnameid,
+  takeProfitPrice,
+  tradeType,
+  advancedTradeId,
+  triggeredDate,
+  advancedTradeEntry,
+  stopLosses
+) {
+  console.log("stopLosses", stopLosses);
+  // Determine the SQL query to find when the take profit was triggered
+  let takeProfitTriggerSql;
+  if (tradeType) {
+    takeProfitTriggerSql =
+      "SELECT MIN(time) AS mintime FROM candlesticks WHERE pair_id = ? AND time > ? AND timeframe = 1.0 AND high >= ?";
+  } else {
+    takeProfitTriggerSql =
+      "SELECT MIN(time) AS mintime FROM candlesticks WHERE pair_id = ? AND time > ? AND timeframe = 1.0 AND low <= ?";
+  }
+
+  // Execute the query to find the take profit triggered date
+  const takeProfitTriggeredDaterows = await executeQuery(takeProfitTriggerSql, [
+    pairId,
+    triggeredDate,
+    takeProfitPrice,
+  ]);
+  if (takeProfitTriggeredDaterows.rows.length === 0) {
+    throw new Error("Take profit not triggered");
+  }
+  const takeProfitTriggeredDate = takeProfitTriggeredDaterows.rows[0].mintime;
+
+  // Calculate the lowest price between the triggered date and the take profit triggered date for buy trades
+  // or the highest price for sell trades, to calculate the maximum potential profit before hitting take profit
+  let profitPriceSql, profitPrice;
+  if (tradeType) {
+    profitPriceSql =
+      "SELECT MIN(low) AS profitPrice FROM candlesticks WHERE pair_id = ? AND time >= ? AND time <= ? AND timeframe = 1.0";
+  } else {
+    profitPriceSql =
+      "SELECT MAX(high) AS profitPrice FROM candlesticks WHERE pair_id = ? AND time >= ? AND time <= ? AND timeframe = 1.0";
+  }
+  const profitPriceRows = await executeQuery(profitPriceSql, [
+    pairId,
+    triggeredDate,
+    takeProfitTriggeredDate,
+  ]);
+  if (profitPriceRows.rows.length > 0) {
+    profitPrice = profitPriceRows.rows[0].profitPrice;
+  }
+
+  // Insert the take profit into the database
+  const takeProfitSql =
+    "INSERT INTO TakeProfit (price, trade_id, time_hit, lowest_price, takeprofit_name_id) VALUES (?, ?, ?, ?, ?)";
+  const takeprofit = await executeQuery(takeProfitSql, [
+    takeProfitPrice,
+    advancedTradeId,
+    takeProfitTriggeredDate,
+    profitPrice,
+    takeprofitnameid,
+  ]);
+  const takeProfitId = takeprofit.lastInsertRowid;
+  console.log("Take profit added successfully");
+
+  await calculateAndInsertTradeRR(
+    profitPrice,
+    takeProfitTriggeredDate,
+    takeProfitId,
+    advancedTradeEntry,
+    stopLosses
+  );
+}
+
+export async function calculateAndInsertTradeRR(
+  profitPrice,
+  takeProfitTriggeredDate,
+  takeProfitId,
+  advancedTradeEntry,
+  stopLosses
+) {
+  // Assuming takeProfit is an object with { price, triggeredDate }
+  // and stopLosses is an array of objects with { price, triggeredDate, id }
+  // advancedTradeEntry includes { entryPrice, tradeId }
+
+  for (const stopLoss of Object.values(stopLosses)) {
+    let rrRatio = 0; // Initialize RR ratio
+    console.log("stopLoss", stopLoss);
+    // Calculate profit and risk based on the trade entry price
+    const profit = Math.abs(profitPrice - advancedTradeEntry.entryPrice);
+    const risk = Math.abs(advancedTradeEntry.entryPrice - stopLoss.price);
+
+    // Calculate RR ratio only if TP is hit before SL and risk is not zero
+    if (takeProfitTriggeredDate < stopLoss.triggeredDate && risk !== 0) {
+      rrRatio = profit / risk;
+    }
+
+    // Insert the RR ratio into the TradeRR table
+    const tradeRRSql = `
+      INSERT INTO TradeRR (takeprofit_id, stoploss_id,RR)
+      VALUES (?, ?, ?)
+    `;
+    await executeQuery(tradeRRSql, [
+      takeProfitId,
+      stopLoss.stopLossId,
+      rrRatio,
+    ]);
+
+    console.log(
+      `RR ratio for StopLoss ID ${stopLoss.stopLossId} inserted successfully.`
+    );
   }
 }
