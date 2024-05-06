@@ -1,7 +1,6 @@
 // services/databaseService.js
 import { createClient } from "@libsql/client";
-import { get } from "jquery";
-import { h } from "vue";
+
 const client = createClient({
   url: "libsql://webapptest-sasax7.turso.io",
   authToken:
@@ -179,6 +178,111 @@ export async function addStrategy(strategyName, userId) {
   }
 }
 
+/**
+ * Retrieves all advanced trades for a given strategy ID.
+ *
+ * @param {number|string} strategyId - The ID of the strategy to retrieve trades for.
+ * @returns {Promise<Array<{id: number, strategy_id: number, pair_id: number, start_date: string, entry_price: number, is_buy: boolean, triggered_date: string}>>} - A promise that resolves to an array of advanced trades.
+ */
+export async function getAdvancedTrades(strategyId) {
+  try {
+    const sql = `
+      SELECT * FROM advancedtrade
+      WHERE strategy_id = ?
+    `;
+    const result = await executeQuery(sql, [strategyId]);
+    const trades = result.rows;
+    console.log("Basic advanced trades retrieved:", trades);
+
+    // Loop through each trade to fetch and add detailed information
+    const detailedTrades = [];
+    for (const trade of trades) {
+      const detailedTrade = await getAdvancedTradeDetails(trade);
+      detailedTrades.push(detailedTrade);
+    }
+
+    console.log("Advanced trades with details:", detailedTrades);
+    return detailedTrades;
+  } catch (error) {
+    console.error("Error getting advanced trades with details:", error);
+    throw error;
+  }
+}
+/**
+ * Retrieves an advanced trade's related information from StopLoss, TakeProfit, PricePoint, and Indicators tables,
+ * including names from their respective name tables, based on the provided advanced trade object.
+ *
+ * @param {Object} trade - The advanced trade object.
+ * @returns {Promise<Object>} - A promise that resolves to an object containing the advanced trade and its related information.
+ */
+export async function getAdvancedTradeDetails(trade) {
+  try {
+    const tradeId = trade.id; // Extract the trade ID from the provided trade object
+
+    // Related StopLoss details with names
+    const stopLossSql = `
+      SELECT sl.*, sln.name AS stopLossName
+      FROM StopLoss sl
+      JOIN StopLossesName sln ON sl.stoploss_name_id = sln.id
+      WHERE sl.trade_id = ?`;
+    const stopLossResult = await executeQuery(stopLossSql, [tradeId]);
+    trade.StopLoss = stopLossResult.rows;
+
+    // Related TakeProfit details with names
+    const takeProfitSql = `
+      SELECT tp.*, tpn.name AS takeProfitName
+      FROM TakeProfit tp
+      JOIN TakeProfitName tpn ON tp.takeprofit_name_id = tpn.id
+      WHERE tp.trade_id = ?`;
+    const takeProfitResult = await executeQuery(takeProfitSql, [tradeId]);
+    trade.TakeProfit = takeProfitResult.rows;
+
+    // Related PricePoint details with names
+    const pricePointSql = `
+      SELECT pp.*, ppn.name AS pricePointName
+      FROM PricePoint pp
+      JOIN PricePointName ppn ON pp.pricepoint_name_id = ppn.id
+      WHERE pp.trade_id = ?`;
+    const pricePointResult = await executeQuery(pricePointSql, [tradeId]);
+    trade.PricePoint = pricePointResult.rows;
+
+    // Related Indicators details with names
+    const indicatorsSql = `
+      SELECT i.*, iname.name AS indicatorName
+      FROM Indicators i
+      JOIN IndicatorName iname ON i.indicator_name_id = iname.id
+      WHERE i.trade_id = ?`;
+    const indicatorsResult = await executeQuery(indicatorsSql, [tradeId]);
+    trade.Indicators = indicatorsResult.rows;
+
+    for (let tp of trade.TakeProfit) {
+      const rrSql = `
+      SELECT
+      RR.*,
+      tpn.name AS takeProfitName,
+      sln.name AS stopLossName  
+    FROM
+      TradeRR RR
+      JOIN TakeProfitName tpn ON RR.takeprofit_id = tpn.id
+      JOIN StopLoss sl ON RR.stoploss_id = sl.id
+      JOIN StopLossesName sln ON sl.stoploss_name_id = sln.id
+    WHERE
+      RR.takeprofit_id = ?`;
+      const rrResult = await executeQuery(rrSql, [tp.id]); // Assuming StopLoss[0] is related
+      if (rrResult.rows.length > 0) {
+        const rrData = rrResult.rows[0];
+        console.log("RR data:", rrData);
+        // Add RR data to the TakeProfit entry
+        tp.RR = rrData;
+      }
+    }
+    console.log("Advanced trade details with names:", trade);
+    return trade;
+  } catch (error) {
+    console.error("Error getting advanced trade details with names:", error);
+    throw error;
+  }
+}
 /**
  * @param {string} userId
  * @returns {Promise<Array<{id: string, name: string}>>}
