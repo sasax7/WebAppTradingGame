@@ -187,22 +187,95 @@ export async function addStrategy(strategyName, userId) {
 export async function getAdvancedTrades(strategyId) {
   try {
     const sql = `
-      SELECT * FROM advancedtrade
-      WHERE strategy_id = ?
+    SELECT
+    t.id AS id,
+    t.start_date AS enterDate,
+    t.triggered_date AS entryTriggeredDate,
+    t.is_buy AS isBuy,
+    t.entry_price AS entryPrice,
+    p.pair_name AS pairname,
+    tp.price AS takeprofitPrice,
+    tp.time_hit AS takeprofitTriggeredDate,
+    tp.lowest_price AS takeprofitLowestPrice,
+    tpn.name AS takeProfitName,
+    sl.price AS stopLossPrice,
+    sl.timehit AS stopLossTriggeredDate,
+    sl.highest_price AS stopLossHighestPrice,
+    sl.highest_RR AS stoplossHighestRR,
+    sl.hit_1_RR AS stopLossHit1RR,
+    sln.name AS stopLossName,
+    pp.value AS pricePointValue,
+    pp.time AS pricePointDate,
+    ppn.name AS pricePointName,
+    i.value AS indicatorValue,
+    i.time AS indicatorDate,
+    iname.name AS indicatorName,
+    rr.RR AS RRmadeSlTP,
+    rr.takeprofit_id AS RRtakeprofitid,
+    rr.stoploss_id AS RRstoplossid
+  FROM
+    advancedtrade t
+    LEFT JOIN TakeProfit tp ON t.id = tp.trade_id
+    LEFT JOIN pairs p ON t.pair_id = p.id
+    LEFT JOIN TakeProfitName tpn ON tp.takeprofit_name_id = tpn.id
+    LEFT JOIN StopLoss sl ON t.id = sl.trade_id
+    LEFT JOIN StopLossesName sln ON sl.stoploss_name_id = sln.id
+    LEFT JOIN PricePoint pp ON t.id = pp.trade_id
+    LEFT JOIN PricePointName ppn ON pp.pricepoint_name_id = ppn.id
+    LEFT JOIN Indicators i ON t.id = i.trade_id
+    LEFT JOIN IndicatorName iname ON i.indicator_name_id = iname.id
+    LEFT JOIN TradeRR rr ON tp.id = rr.takeprofit_id AND sl.id = rr.stoploss_id
+  
+  WHERE
+    t.strategy_id = ?;
     `;
     const result = await executeQuery(sql, [strategyId]);
     const trades = result.rows;
-    console.log("Basic advanced trades retrieved:", trades);
 
-    // Loop through each trade to fetch and add detailed information
-    const detailedTrades = [];
-    for (const trade of trades) {
-      const detailedTrade = await getAdvancedTradeDetails(trade);
-      detailedTrades.push(detailedTrade);
-    }
+    // Group and format the result
+    const groupedTrades = trades.reduce((acc, trade) => {
+      if (!acc[trade.id]) {
+        acc[trade.id] = {
+          id: trade.id,
+          strategy_id: trade.strategy_id,
+          pair_id: trade.pair_id,
+          start_date: trade.start_date,
+          entry_price: trade.entry_price,
+          is_buy: trade.is_buy,
+          triggered_date: trade.triggered_date,
+          TakeProfits: {},
+          StopLosses: {},
+          PricePoints: {},
+          Indicators: {},
+        };
+      }
 
-    console.log("Advanced trades with details:", detailedTrades);
-    return detailedTrades;
+      acc[trade.id].TakeProfits[trade.takeprofit_id] = {
+        id: trade.takeprofit_id,
+        name: trade.takeProfitName,
+        RR: trade.rr,
+      };
+
+      acc[trade.id].StopLosses[trade.stoploss_id] = {
+        id: trade.stoploss_id,
+        name: trade.stopLossName,
+      };
+      acc[trade.id].PricePoints[trade.pricepoint_id] = {
+        id: trade.pricepoint_id,
+        name: trade.pricePointName,
+      };
+
+      acc[trade.id].Indicators[trade.indicator_id] = {
+        id: trade.indicator_id,
+        name: trade.indicatorName,
+      };
+      return acc;
+    }, {});
+
+    const formattedTrades = Object.values(groupedTrades);
+
+    console.log("Advanced trades with details:", formattedTrades);
+    return formattedTrades;
   } catch (error) {
     console.error("Error getting advanced trades with details:", error);
     throw error;
