@@ -1,6 +1,6 @@
 import { h, resolveComponent } from 'vue'
-import { createRouter, createWebHashHistory } from 'vue-router'
-
+import { createRouter, createWebHistory } from 'vue-router'
+import Cookies from 'js-cookie'
 import DefaultLayout from '@/layouts/DefaultLayout'
 
 const routes = [
@@ -9,10 +9,12 @@ const routes = [
     name: 'Home',
     component: DefaultLayout,
     redirect: '/dashboard',
+    meta: { requiresAuth: true },
     children: [
       {
         path: '/dashboard',
         name: 'Dashboard',
+        meta: { requiresAuth: true },
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
@@ -281,21 +283,25 @@ const routes = [
       {
         path: '404',
         name: 'Page404',
+        meta: { requiresAuth: false },
         component: () => import('@/views/pages/Page404'),
       },
       {
         path: '500',
         name: 'Page500',
+        meta: { requiresAuth: false },
         component: () => import('@/views/pages/Page500'),
       },
       {
         path: 'login',
         name: 'Login',
+        meta: { requiresAuth: false },
         component: () => import('@/views/pages/Login'),
       },
       {
         path: 'register',
         name: 'Register',
+        meta: { requiresAuth: false },
         component: () => import('@/views/pages/Register'),
       },
     ],
@@ -303,12 +309,30 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(process.env.BASE_URL),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
   scrollBehavior() {
     // always scroll to top
     return { top: 0 }
   },
+})
+
+router.beforeEach((to, from, next) => {
+  // check if the route requires authentication
+  console.log("userId", Cookies.get('userId'))
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    // check if the cookie exists
+    if (!Cookies.get('userId')) {
+      // if the cookie doesn't exist, redirect to the login page
+      next({ name: 'Login' }).catch(err => console.error(err));
+    } else {
+      // if the cookie exists, proceed to the route
+      next()
+    }
+  } else {
+    // if the route doesn't require authentication, proceed to the route
+    next()
+  }
 })
 
 export default router
