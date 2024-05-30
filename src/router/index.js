@@ -24,6 +24,12 @@ const routes = [
           ),
       },
       {
+        path: '/candlestickchart',
+        name: 'Candlestick Chart',
+        component: () => import('@/views/dashboard/ChartDashboard.vue'),
+        
+      },
+      {
         path: '/theme',
         name: 'Theme',
         redirect: '/theme/typography',
